@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ========== ANIMACIONES ========== */
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+@keyframes glitch {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 5px rgba(0, 243, 255, 0.3); }
+  50% { box-shadow: 0 0 15px rgba(0, 243, 255, 0.6); }
+}
+
+@keyframes slide-in-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scale-in {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* ========== BASE: FONDO OSCURO, TEXTO CLARO ========== */
+@layer base {
+  body {
+    @apply bg-[#0a0a0c] text-gray-200 font-body-md min-h-screen selection:bg-cyan-500/30 selection:text-white;
+    font-family: 'Rajdhani', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orbitron', sans-serif;
+  }
+}
+
+/* ========== COMPONENTES OSCUROS CORREGIDOS ========== */
+@layer components {
+  /* Paneles glass (oscuros, no muy claros) */
+  .glass-panel {
+    @apply bg-black/40 backdrop-blur-xl border border-white/10;
+    background: linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(15,15,20,0.4) 100%);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  }
+
+  .glass-card {
+    @apply bg-black/30 backdrop-blur-xl border border-white/10;
+    background: linear-gradient(135deg, rgba(20,20,30,0.5) 0%, rgba(10,10,15,0.3) 100%);
+  }
+
+  /* Efectos hover (neón pero sobrio) */
+  .neon-glow-hover:hover {
+    @apply border-cyan-400 shadow-[0_0_12px_rgba(0,243,255,0.4)] scale-[1.02];
+  }
+
+  .neon-glow-primary:hover {
+    @apply shadow-[0_0_12px_rgba(190,198,224,0.3)] border-gray-400;
+  }
+
+  /* Pestaña activa */
+  .step-active:after {
+    content: '';
+    @apply absolute bottom-[-8px] left-0 w-full h-[2px] bg-cyan-400 shadow-[0_0_8px_#00f3ff];
+  }
+
+  /* Iconos material */
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    vertical-align: middle;
+  }
+
+  /* ========== INPUTS, SELECTS, TEXTAREA (OSCUROS, NO CLAROS) ========== */
+  input, select, textarea {
+    @apply bg-gray-900/80 border border-gray-700 text-gray-200 rounded-full px-4 py-2;
+    @apply focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500;
+    @apply hover:border-gray-500 transition-all;
+  }
+  
+  /* Placeholder más tenue */
+  input::placeholder, textarea::placeholder {
+    @apply text-gray-500;
+  }
+  
+  /* Opciones de select (fondo oscuro) */
+  select option {
+    @apply bg-gray-900 text-gray-200;
+  }
+
+  /* ========== BOTONES OSCUROS (sin colores muy brillantes) ========== */
+  .btn-primary {
+    @apply bg-cyan-900/60 text-cyan-100 border border-cyan-700 px-5 py-2 rounded-full;
+    @apply hover:bg-cyan-800/80 hover:border-cyan-500 transition-all font-medium;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-800/60 text-gray-200 border border-gray-700 px-5 py-2 rounded-full;
+    @apply hover:bg-gray-700/80 hover:border-gray-500 transition-all font-medium;
+  }
+  
+  .btn-success {
+    @apply bg-green-900/60 text-green-100 border border-green-800 px-5 py-2 rounded-full;
+    @apply hover:bg-green-800/80 hover:border-green-600 transition-all font-medium;
+  }
+  
+  .btn-danger {
+    @apply bg-red-900/60 text-red-100 border border-red-800 px-5 py-2 rounded-full;
+    @apply hover:bg-red-800/80 hover:border-red-600 transition-all font-medium;
+  }
+
+  /* Para botones con variante neón que ya tenías */
+  .neon-border {
+    box-shadow: 0 0 4px rgba(0, 243, 255, 0.3), inset 0 0 2px rgba(0, 243, 255, 0.1);
+  }
+  
+  .neon-border-purple {
+    box-shadow: 0 0 4px rgba(147, 51, 234, 0.3), inset 0 0 2px rgba(147, 51, 234, 0.1);
+  }
+
+  /* Utilidades de animación */
+  .animate-scanline { animation: scanline 8s linear infinite; }
+  .animate-glitch:hover { animation: glitch 0.3s ease-in-out; }
+  .animate-pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
+  .animate-slide-in-up { animation: slide-in-up 0.5s ease-out; }
+  .animate-fade-in { animation: fade-in 0.3s ease-out; }
+  .animate-scale-in { animation: scale-in 0.3s ease-out; }
+  
+  /* Grid cyberpunk (oscuro) */
+  .cyber-grid {
+    background-image: 
+      linear-gradient(rgba(0, 243, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 243, 255, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+}
+
+/* ========== UTILIDADES DE TEXTO (siempre legibles en oscuro) ========== */
+@layer utilities {
+  .text-label-caps {
+    @apply text-xs font-bold tracking-wider uppercase text-gray-300;
+  }
+  
+  .font-display-lg {
+    @apply text-[48px] leading-[56px] tracking-tight font-bold text-white;
+  }
+  
+  .font-headline-md {
+    @apply text-[24px] leading-[32px] font-semibold text-gray-100;
+  }
+  
+  .font-headline-sm {
+    @apply text-[20px] leading-[28px] font-semibold text-gray-200;
+  }
+  
+  .font-body-lg {
+    @apply text-[18px] leading-[28px] text-gray-300;
+  }
+  
+  .font-body-md {
+    @apply text-[16px] leading-[24px] text-gray-300;
+  }
+  
+  .font-body-sm {
+    @apply text-[14px] leading-[20px] text-gray-400;
+  }
+}
+
+/* ========== SCROLLBAR OSCURO ========== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #1a1a1c;
+}
+::-webkit-scrollbar-thumb {
+  background: #3f3f46;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #52525b;
+}
