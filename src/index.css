@@ -38,6 +38,16 @@
   to { opacity: 1; transform: scale(1); }
 }
 
+@keyframes pulse-glow-green {
+  0%, 100% { box-shadow: 0 0 5px rgba(37, 211, 102, 0.3); }
+  50% { box-shadow: 0 0 25px rgba(37, 211, 102, 0.6); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
 /* ========== BASE: FONDO OSCURO, TEXTO CLARO ========== */
 @layer base {
   body {
@@ -136,9 +146,21 @@
   .animate-scanline { animation: scanline 8s linear infinite; }
   .animate-glitch:hover { animation: glitch 0.3s ease-in-out; }
   .animate-pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
+  .animate-pulse-glow-green { animation: pulse-glow-green 2s ease-in-out infinite; }
+  .animate-float { animation: float 3s ease-in-out infinite; }
   .animate-slide-in-up { animation: slide-in-up 0.5s ease-out; }
   .animate-fade-in { animation: fade-in 0.3s ease-out; }
   .animate-scale-in { animation: scale-in 0.3s ease-out; }
+  
+  /* Staggered delays */
+  .delay-100 { animation-delay: 100ms; }
+  .delay-200 { animation-delay: 200ms; }
+  .delay-300 { animation-delay: 300ms; }
+  .delay-400 { animation-delay: 400ms; }
+  .delay-500 { animation-delay: 500ms; }
+  .delay-600 { animation-delay: 600ms; }
+  .delay-700 { animation-delay: 700ms; }
+  .delay-800 { animation-delay: 800ms; }
   
   /* Grid cyberpunk (oscuro) */
   .cyber-grid {
