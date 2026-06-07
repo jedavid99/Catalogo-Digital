@@ -15,7 +15,7 @@
 
 ### 1. Inicializar git (si no está inicializado)
 ```bash
-cd c:\Users\david\Documents\gameCalatago\cybervault-react
+cd c:\Users\david\Documents\gameCalatago\Play GO-react
 git init
 ```
 
@@ -91,7 +91,7 @@ git push -u origin production
 - Ve a https://vercel.com/new
 - Importa tu repositorio de GitHub
 - En "Framework Preset" selecciona "Vite"
-- En "Root Directory" deja vacío (o `cybervault-react` si está en subcarpeta)
+- En "Root Directory" deja vacío (o `Play GO-react` si está en subcarpeta)
 
 ### 2. Configurar variables de entorno
 - En Vercel, ve a Settings → Environment Variables

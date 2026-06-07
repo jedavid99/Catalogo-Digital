@@ -286,7 +286,7 @@ const ConfirmationPage = () => {
                   <div className="flex items-start gap-3 mb-3">
                     <span className="material-symbols-outlined text-primary">location_on</span>
                     <div>
-                      <p className="font-bold text-onSurface">CyberVault Gaming Store</p>
+                      <p className="font-bold text-onSurface">Play GO Store</p>
                       <p className="text-sm text-onSurfaceVariant">Av. Corrientes 1234, Buenos Aires</p>
                     </div>
                   </div>
@@ -310,7 +310,7 @@ const ConfirmationPage = () => {
                   ></iframe>
                 </div>
                 <a 
-                  href="https://www.google.com/maps/search/?api=1&query=CyberVault+Gaming+Store+Buenos+Aires"
+                  href="https://www.google.com/maps/search/?api=1&query=Play GO+Gaming+Store+Buenos+Aires"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full inline-flex items-center justify-center gap-2 bg-primary text-on-primary px-4 py-3 rounded-xl font-bold hover:bg-primary/90 transition-colors"
