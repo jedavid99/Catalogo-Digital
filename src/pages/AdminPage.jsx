@@ -810,9 +810,9 @@ const AdminPage = () => {
                     <option>PS3</option>
                     <option>PS5</option>
                     <option>Licencias</option>
-                    <option>Xbox</option>
+                    {/* <option>Xbox</option>
                     <option>Nintendo</option>
-                    <option>Steam</option>
+                    <option>Steam</option> */}
                    
                   </select>
                 </div>
