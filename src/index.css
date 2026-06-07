@@ -48,6 +48,29 @@
   50% { transform: translateY(-10px); }
 }
 
+/* Animaciones del hero estilo referencia */
+@keyframes revealUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 0 0 rgba(253, 190, 17, 0.4); }
+  70% { box-shadow: 0 0 0 20px rgba(253, 190, 17, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(253, 190, 17, 0); }
+}
+
+@keyframes kenBurns {
+  from { transform: scale(1); }
+  to { transform: scale(1.15); }
+}
+
+@keyframes floating {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
 /* ========== BASE: FONDO OSCURO, TEXTO CLARO ========== */
 @layer base {
   body {
@@ -151,6 +174,14 @@
   .animate-slide-in-up { animation: slide-in-up 0.5s ease-out; }
   .animate-fade-in { animation: fade-in 0.3s ease-out; }
   .animate-scale-in { animation: scale-in 0.3s ease-out; }
+  
+  /* Nuevas animaciones del hero */
+  .reveal-up { 
+    animation: revealUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; 
+    opacity: 0; 
+  }
+  .animate-ken-burns { animation: kenBurns 20s infinite alternate ease-in-out; }
+  .animate-floating { animation: floating 4s ease-in-out infinite; }
   
   /* Staggered delays */
   .delay-100 { animation-delay: 100ms; }
