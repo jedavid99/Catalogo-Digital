@@ -188,7 +188,7 @@ const StorePage = () => {
             <div>
               <label className="font-label-caps text-on-surface-variant block mb-4">PLATAFORMA</label>
               <div className="space-y-1">
-                {['all', 'PC', 'PS4', 'Xbox', 'Nintendo', 'Steam', 'Gift Cards'].map((platform) => (
+                {['all', 'PC', 'PS4','PS3','PS5','Licencias', 'Xbox', 'Nintendo', 'Steam', 'Gift Cards'].map((platform) => (
                   <label 
                     key={platform} 
                     className={`

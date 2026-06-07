@@ -807,10 +807,13 @@ const AdminPage = () => {
                   <select value={formData.platform} onChange={(e) => setFormData({ ...formData, platform: e.target.value })} className="w-full bg-surface-container border border-outline-variant/30 rounded-xl px-4 py-2 mt-1 hover:border-primary/50 transition-all tracking-wider text-white">
                     <option>PC</option>
                     <option>PS4</option>
+                    <option>PS3</option>
+                    <option>PS5</option>
+                    <option>Licencias</option>
                     <option>Xbox</option>
                     <option>Nintendo</option>
                     <option>Steam</option>
-                    <option>Gift Cards</option>
+                   
                   </select>
                 </div>
                 <div>
