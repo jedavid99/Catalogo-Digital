@@ -24,19 +24,19 @@ const GuidesPage = () => {
       ]
     },
     {
-      platform: 'PlayStation',
+      platform: 'PS4',
       icon: 'videogame_asset',
       description: 'Consolas de videojuegos de Sony: PS4, PS5 y PS3.',
-      guide: '/guides/playstation-installation.pdf',
+      guide: '/guides/PS4-installation.pdf',
       videos: [
-        { title: 'Canjear código en PlayStation Store', url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ' },
+        { title: 'Canjear código en PS4 Store', url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ' },
         { title: 'Instalación en PS4/PS5', url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ' }
       ]
     },
     {
       platform: 'PS4',
       icon: 'videogame_asset',
-      description: 'Consola PlayStation 4 de Sony.',
+      description: 'Consola PS4 4 de Sony.',
       guide: '/guides/ps4-installation.pdf',
       videos: [
         { title: 'Canjear código en PS4', url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ' },
@@ -46,7 +46,7 @@ const GuidesPage = () => {
     {
       platform: 'PS5',
       icon: 'videogame_asset',
-      description: 'Consola PlayStation 5 de Sony.',
+      description: 'Consola PS4 5 de Sony.',
       guide: '/guides/ps5-installation.pdf',
       videos: [
         { title: 'Canjear código en PS5', url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ' },
@@ -56,7 +56,7 @@ const GuidesPage = () => {
     {
       platform: 'PS3',
       icon: 'videogame_asset',
-      description: 'Consola PlayStation 3 de Sony.',
+      description: 'Consola PS4 3 de Sony.',
       guide: '/guides/ps3-installation.pdf',
       videos: [
         { title: 'Canjear código en PS3', url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ' },
