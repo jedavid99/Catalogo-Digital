@@ -13,6 +13,8 @@ const StorePage = () => {
   const [selectedPlatform, setSelectedPlatform] = useState('all')
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [currentSlide, setCurrentSlide] = useState(0)
+  const [currentPage, setCurrentPage] = useState(1)
+  const productsPerPage = 9
 
   const featuredGames = getFeaturedProducts(products, config.heroFeaturedIds).map((p) => ({
       name: p.name,
@@ -41,6 +43,17 @@ const StorePage = () => {
     const matchesCategory = selectedCategory === 'all' || product.category === selectedCategory
     return matchesSearch && matchesPlatform && matchesCategory
   })
+
+  // Resetear página cuando cambian los filtros
+  useEffect(() => {
+    setCurrentPage(1)
+  }, [searchTerm, selectedPlatform, selectedCategory])
+
+  // Calcular productos paginados
+  const totalPages = Math.ceil(filteredProducts.length / productsPerPage)
+  const indexOfLastProduct = currentPage * productsPerPage
+  const indexOfFirstProduct = indexOfLastProduct - productsPerPage
+  const paginatedProducts = filteredProducts.slice(indexOfFirstProduct, indexOfLastProduct)
 
   return (
     <>
@@ -299,10 +312,47 @@ const StorePage = () => {
               ? 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6' 
               : 'space-y-4'
           }>
-            {filteredProducts.map((product) => (
+            {paginatedProducts.map((product) => (
               <ProductCard key={product.id} product={product} viewMode={config.viewMode} />
             ))}
           </div>
+
+          {/* Paginación */}
+          {totalPages > 1 && (
+            <div className="flex items-center justify-center gap-2 mt-8">
+              <button
+                onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+                disabled={currentPage === 1}
+                className="px-4 py-2 rounded-lg bg-surface-container-high border border-outline-variant text-on-surface disabled:opacity-50 disabled:cursor-not-allowed hover:bg-surface-container transition-all"
+              >
+                <span className="material-symbols-outlined">chevron_left</span>
+              </button>
+              
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                <button
+                  key={page}
+                  onClick={() => setCurrentPage(page)}
+                  className={`
+                    w-10 h-10 rounded-lg font-medium transition-all
+                    ${currentPage === page 
+                      ? 'bg-primary text-on-primary shadow-lg shadow-primary/20' 
+                      : 'bg-surface-container-high border border-outline-variant text-on-surface hover:bg-surface-container'
+                    }
+                  `}
+                >
+                  {page}
+                </button>
+              ))}
+              
+              <button
+                onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+                disabled={currentPage === totalPages}
+                className="px-4 py-2 rounded-lg bg-surface-container-high border border-outline-variant text-on-surface disabled:opacity-50 disabled:cursor-not-allowed hover:bg-surface-container transition-all"
+              >
+                <span className="material-symbols-outlined">chevron_right</span>
+              </button>
+            </div>
+          )}
 
           {filteredProducts.length === 0 && (
             <div className="text-center py-20">
