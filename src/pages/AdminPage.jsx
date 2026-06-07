@@ -806,7 +806,7 @@ const AdminPage = () => {
                   <label className="text-sm font-medium tracking-wider">PLATAFORMA</label>
                   <select value={formData.platform} onChange={(e) => setFormData({ ...formData, platform: e.target.value })} className="w-full bg-surface-container border border-outline-variant/30 rounded-xl px-4 py-2 mt-1 hover:border-primary/50 transition-all tracking-wider text-white">
                     <option>PC</option>
-                    <option>PlayStation</option>
+                    <option>PS4</option>
                     <option>Xbox</option>
                     <option>Nintendo</option>
                     <option>Steam</option>
@@ -945,8 +945,8 @@ const AdminPage = () => {
                   value={importData}
                   onChange={(e) => setImportData(e.target.value)}
                   placeholder={importFormat === 'json' 
-                    ? '[\n  {"name": "Juego 1", "platform": "PC", "price": "$10.000", "img": "url...", "category": "Action"},\n  {"name": "Juego 2", "platform": "PlayStation", "price": "$15.000", "img": "url...", "category": "RPG"}\n]'
-                    : 'name,platform,price,img,category\n"Juego 1","PC","$10.000","url...","Action"\n"Juego 2","PlayStation","$15.000","url...","RPG"'
+                    ? '[\n  {"name": "Juego 1", "platform": "PC", "price": "$10.000", "img": "url...", "category": "Action"},\n  {"name": "Juego 2", "platform": "PS4", "price": "$15.000", "img": "url...", "category": "RPG"}\n]'
+                    : 'name,platform,price,img,category\n"Juego 1","PC","$10.000","url...","Action"\n"Juego 2","PS4","$15.000","url...","RPG"'
                   }
                   className="w-full bg-surface-container border border-outline-variant/30 rounded-xl px-4 py-3 h-64 font-mono text-sm resize-none neon-border-purple tracking-wider text-white placeholder:text-onSurfaceVariant/50"
                   required

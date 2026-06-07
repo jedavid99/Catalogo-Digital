@@ -31,10 +31,10 @@ const ConfirmationPage = () => {
           { title: 'Configuración óptima de PC', url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ' }
         ]
       },
-      'PlayStation': {
-        guide: '/guides/playstation-installation.pdf',
+      'PS4': {
+        guide: '/guides/PS4-installation.pdf',
         videos: [
-          { title: 'Canjear código en PlayStation Store', url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ' },
+          { title: 'Canjear código en PS4 Store', url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ' },
           { title: 'Instalación en PS4/PS5', url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ' }
         ]
       },

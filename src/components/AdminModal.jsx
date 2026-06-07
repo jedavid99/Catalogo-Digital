@@ -407,7 +407,7 @@ const AdminModal = () => {
                     onChange={(e) => setFormData({ ...formData, platform: e.target.value })}
                   >
                     <option>PC</option>
-                    <option>PlayStation</option>
+                    <option>PS4</option>
                     <option>Xbox</option>
                     <option>Nintendo</option>
                     <option>Steam</option>
