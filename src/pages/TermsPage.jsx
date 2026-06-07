@@ -10,14 +10,14 @@ const TermsPage = () => {
           <section>
             <h2 className="font-headline-sm text-headline-sm text-primary mb-4">1. Aceptación de los Términos</h2>
             <p className="text-body-md text-body-md text-onSurfaceVariant leading-relaxed">
-              Al acceder y utilizar CyberVault, aceptas estar sujeto a estos términos y condiciones. Si no estás de acuerdo con estos términos, por favor no utilices este servicio.
+              Al acceder y utilizar Play GO, aceptas estar sujeto a estos términos y condiciones. Si no estás de acuerdo con estos términos, por favor no utilices este servicio.
             </p>
           </section>
 
           <section>
             <h2 className="font-headline-sm text-headline-sm text-primary mb-4">2. Descripción del Servicio</h2>
             <p className="text-body-md text-body-md text-onSurfaceVariant leading-relaxed">
-              CyberVault es una tienda digital que ofrece productos digitales incluyendo juegos, licencias de software, tarjetas de regalo y monedas de juegos. Todos los productos son entregados en formato digital a través de códigos, claves o instrucciones de instalación.
+              Play GO es una tienda digital que ofrece productos digitales incluyendo juegos, licencias de software, tarjetas de regalo y monedas de juegos. Todos los productos son entregados en formato digital a través de códigos, claves o instrucciones de instalación.
             </p>
           </section>
 
@@ -55,21 +55,21 @@ const TermsPage = () => {
             <div className="space-y-3 text-body-md text-body-md text-onSurfaceVariant leading-relaxed">
               <p>• El usuario es responsable de mantener la confidencialidad de su cuenta y contraseña.</p>
               <p>• El usuario se compromete a utilizar los productos adquiridos de manera legal y conforme a los términos de servicio de cada plataforma.</p>
-              <p>• CyberVault no se hace responsable por el uso indebido de los productos adquiridos.</p>
+              <p>• Play GO no se hace responsable por el uso indebido de los productos adquiridos.</p>
             </div>
           </section>
 
           <section>
             <h2 className="font-headline-sm text-headline-sm text-primary mb-4">7. Propiedad Intelectual</h2>
             <p className="text-body-md text-body-md text-onSurfaceVariant leading-relaxed">
-              Todos los productos digitales son propiedad de sus respectivos desarrolladores y editores. CyberVault actúa como distribuidor autorizado y no reclama propiedad sobre los productos que vende.
+              Todos los productos digitales son propiedad de sus respectivos desarrolladores y editores. Play GO actúa como distribuidor autorizado y no reclama propiedad sobre los productos que vende.
             </p>
           </section>
 
           <section>
             <h2 className="font-headline-sm text-headline-sm text-primary mb-4">8. Modificaciones de los Términos</h2>
             <p className="text-body-md text-body-md text-onSurfaceVariant leading-relaxed">
-              CyberVault se reserva el derecho de modificar estos términos y condiciones en cualquier momento. Los cambios entrarán en vigor inmediatamente después de su publicación en el sitio web.
+              Play GO se reserva el derecho de modificar estos términos y condiciones en cualquier momento. Los cambios entrarán en vigor inmediatamente después de su publicación en el sitio web.
             </p>
           </section>
 

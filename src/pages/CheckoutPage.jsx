@@ -85,7 +85,7 @@ const CheckoutPage = () => {
     // Generar mensaje de WhatsApp con el código del pedido
     const itemsList = cart.map(item => `• ${item.name} - ${item.price}`).join('\n')
     const whatsappMessage = encodeURIComponent(
-      `🎮 *Nuevo Pedido - CyberVault*\n\n` +
+      `🎮 *Nuevo Pedido - Play GO*\n\n` +
       `📋 *Código del Pedido:* ${order.orderCode}\n\n` +
       `👤 *Cliente:* ${customerInfo.name}\n` +
       `📧 *Email:* ${customerInfo.email}\n` +

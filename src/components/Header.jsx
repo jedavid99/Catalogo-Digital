@@ -55,7 +55,7 @@ const Header = ({ cart = [] }) => {
             to="/" 
             className="text-2xl md:text-3xl font-bold tracking-tighter text-primary hover:opacity-80 transition-opacity active:scale-95"
           >
-            CyberVault
+            Play GO
           </Link>
 
           {/* Desktop Navigation */}

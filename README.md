@@ -1,12 +1,12 @@
-# CyberVault Gaming - React con Vite
+# Play GO - React con Vite
 
-Proyecto React con Vite que replica el diseño y funcionalidad del sitio original CyberVault Gaming, una tienda de juegos digitales.
+Proyecto React con Vite que replica el diseño y funcionalidad del sitio original Play GO, una tienda de juegos digitales.
 
 ## 🚀 Instalación
 
 1. **Navegar al directorio del proyecto:**
    ```bash
-   cd cybervault-react
+   cd Play GO-react
    ```
 
 2. **Instalar las dependencias:**
@@ -26,7 +26,7 @@ Proyecto React con Vite que replica el diseño y funcionalidad del sitio origina
 ## 📦 Estructura del Proyecto
 
 ```
-cybervault-react/
+Play GO-react/
 ├── public/                 # Archivos estáticos
 ├── src/
 │   ├── components/         # Componentes reutilizables
